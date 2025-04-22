@@ -1,0 +1,412 @@
+                                                         Module 2-Front end-HTML
+                                                                       HTML basics
+
+Theory assignment 
+	•	Question 1: Define HTML.what is the purpose of html in web development?
+	⁃	HTML stands for Hypertext Markup Language.it’s the foundation of web pages, providing the structure and content organisation for web pages displayed in browsers.it’s purpose in web development is to define the content, like text, images, and links, and how they should be displayed, making it the backbone for creating web pages.
+
+	•	Question 2:Explain the basic structure of an HTML document.identify the mandatory tags and their purpose.
+	⁃	The basic HTML document structure consists of the <html>,<head>,<title>,and <body> tags.These tags are fundamental for defining the structure and content of an HTML page.the <html>tag encapsulates the entire document.the <head>section contains metadata, including the <title>tag which set the page title.the<body>contains the visible content of the webpage.
+
+	⁃	Mandatory Tags and their purpose:
+	⁃	<!DOCTYPE html>:
+	⁃	This declaration is not a tag but a directive that tells the browser the document is written in html5.
+	⁃	<html>:
+	⁃	This tag is root element of the HTML document, containing all other elements.
+	⁃	<head>:
+	⁃	This section contains metadata about the document ,such as the page title, character
+	⁃	stand links to external stylesheets or scripts.
+	⁃	<title>:
+	⁃	This tag specifies the title of the document ,which is displayed in the browser tab or window title bar.
+	⁃	<body>:
+	⁃	This  tag contains all the content that will be displayed in the web page, including text, images, and other interactive elements.
+
+
+	•	Question 3:What is the difference between block-level elements and inline elements in HTML?Provide examples of each.
+	⁃	HTML in block-level elements  and inline elements have different display behaviour.block-level elements always start on a new line and take up the full width available within their container ,while inline elements fit within a line of text and only take up as much width as their content requires.
+	⁃	Block-evel elements examples:
+	⁃	<div>,<p>,<h1>-<h6>,<ul>,<ol>,<li>,<table>.
+	⁃	Inline elements example:
+	⁃	<span>,<a>,<img>,<b>,<i>.
+
+
+	•	Question 4:Discuss  the role of semantic HTML.why is it important for accessibility and SEO?Provide example of semantic elements.
+	⁃	Semantic HTML : accessibility : improve navigation for screen readers and other assistive technologies.
+	⁃	allow users with disabilities to  understand the structure of the page better.
+	⁃	SEO (search engine optimization): search engines rely on  page structure to understand content hierarchy.
+	⁃	semantic elemantic help search engine index pages more accurately potentially boosting search ranking.
+	⁃	   -      example semantic elements : 
+	⁃	<header> introductory content usually at the top of a page or section.
+	⁃	<nav> navigating links
+	⁃	<main> represents the main content of the document.
+	⁃	<section> group related content together.
+	⁃	<article> self-contained content like a blog post
+	⁃	<aside> side content , like ads or related links
+	⁃	<footer>footer content for a page or section
+	⁃	<figure>used for images or diagrams with a caption
+	⁃	<figcaption> caption for a figure
+	⁃	<mark> highlight text
+	⁃	<time> represents a specific time or date
+
+
+
+
+Lab assignment 
+Task:
+Create a simple HTML webpage that includes:
+	⁃	A header (<header>),footer(<footer>),main section (<main>),and aside section(<aside>).
+	⁃	A paragraph with some basic text.
+	⁃	A list of(both ordered and unordered).
+	⁃	A link that opens in a new tab.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple html webpage</title>
+</head>
+<body>
+     <header>
+        <h1>simple html webpage</h1>
+        <p> my webpage</p>
+     </header>
+
+     <main>
+        <h2>A paragraph</h2>
+        <p>a some text</p>
+     
+
+     <h3>unorderedlist </h3>
+     <ul>
+        <li>Apple</li>
+        <li>samsung</li>
+        <li>vivo</li>
+     </ul>
+
+     <h3>ordered List</h3>
+     <ol>
+        <li>Apple 14 pro</li>
+        <li>samsung s25</li>
+        <li>vivo y51a</li>
+     </ol>
+
+     
+        <p>watch a bgmi gaming video
+        <a href="https://www.youtube.com/watch?v=XT1gcxQJlws" target="_blank">
+            know about gaming
+        </a>.
+        </p>
+     </main>
+
+     <aside>
+        <h3>Samsung s25</h3>
+        <p>Samsung s25 lauch in february 7,2025</p>
+     </aside>
+     
+     <footer>
+        <p>&copy;simple html webpage</p>
+     </footer>
+</body>
+</html>
+
+
+
+
+                                                                   HTML forms
+
+Theory Assignment
+	•	Question 1:what are HTML forms used for?Describe the purpose of the input,textarea,select,and button elements.
+	⁃	HTML forms are used to collect user input and send io a server for processing.like login  in , sign up , submit .
+	⁃	  purpose ;
+	⁃	<input>: captures short-form data like text ,number, emails ,passwords ,cheakboxes , etc.
+	⁃	type : The type attribute changes behaviour ( text , emails , password , checkbox)
+	⁃	<textarea> : collect multiline text input. 
+	⁃	The  element allowing users to enter longer pieces of text like comments or messages.
+	⁃	<select>:create a dropdown menu from which users can choose one or more options.
+	⁃	use for : selection , settings
+	⁃	<button> : a clickable button, use for submit a form , reset 
+	⁃	type :  submit ;  send the form data to the server 
+	⁃	           reset : clear the form fields 
+
+
+	•	question 2:Explain the difference between the get and post methods in form submission.When should each be used?
+	⁃	GET method work : sends form data in the URL as query parameters
+	⁃	can be bookmarked and cashed.
+	⁃	has length limitations.
+	⁃	WHEN use : you’re retrieving data (i.e.,a safe and idempotent request).
+	⁃	The form does not involve sensitive data (like passwords).
+	⁃	you want the result to be shareable / bookmark able, like a search query or filter settings.
+
+	⁃	POST method work : sends form data in the request body , not in the url.
+	⁃	not cached or bookmarked.
+	⁃	can handle larger amounts of data and binary content.
+	⁃	like : search form , filter options  
+	⁃	WHEN use : you’re submitting or modifying data on the server.
+	⁃	the form includes sensitive data (like login credentials).
+	⁃	you don’t want the data to be visible in the url.
+	⁃	like : login  form , sign up  form , contact form 
+
+
+
+	•	question 3 : What is the purpose of the label element in a form , and how does it improve accessibility?
+	⁃	PURPOSE of the <label> element : connects descriptive text with a form control.
+	⁃	make forms easier to use and understandable.
+	⁃	allows users to click the label to focus or toggle the associated control.
+
+	•	HOW it improves accessibility
+	•	screen readers : when a label is linked to an input ,screen readers will read the label when the user focuses on that input.
+	•	Larger click area : for checkboxes and radio buttons , clicking the label also selects the option
+	•	helpful for users with motor impairments.
+	•	keyboard navigation : users navigating via keyboard can essily understand what each field is for when label are properly associated.
+
+
+
+Lab assignment 
+Task : 
+create a contact form with the following fields:
+	⁃	Full name (text input)
+	⁃	Email (email input)
+	⁃	Phone number (tel input)
+	⁃	Subject (dropdown menu)
+	⁃	Message (text area)
+	⁃	Submit button
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <label for="">enter your full name</label>
+        <input 
+          type="text" 
+          id="Name" 
+          name="fullName" 
+          required 
+          minlength="2" 
+          maxlength="50"
+        >
+    </div>
+    <div>
+        <label for="">enter your email</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          required 
+          maxlength="100"
+        >
+    </div>
+    <div>
+        <label for="">enter your phone number</label>
+        <input 
+          type="tel" 
+          id="phone" 
+          name="phone" 
+          required 
+          pattern="^\+?[0-9\s\-]{7,15}$"
+        
+        >
+    </div>
+    <div>
+        <label for="">Subject</label>
+        <select id="" name="subject" required>
+          <option value="">select a subject </option>
+          <option value="">math</option>
+          <option value="">gujrati</option>
+          <option value="">english</option>
+          
+        </select>
+    </div>
+    <div>
+    
+        <label for="message">Message</label>
+        <textarea 
+          id="message" 
+          name="message" 
+          rows="3" 
+          required 
+          minlength="10" 
+          maxlength="1000">
+    </textarea>
+    </div>
+    <div>
+        <input type="submit">
+    </div>
+      </form>
+    
+</body>
+</html>
+
+
+
+                                                                          HTML Tables
+Theory assignment
+	•	Question 1 : Explain the structure of an html table and the purpose of each of the following elements : <table> ,  <tr> , <th> , <td> , and <thead> .
+	⁃	html structure 
+<table>
+	⁃	    <thead>
+	⁃	      <tr>
+	⁃	        <th>Month</th>
+	⁃	        <th>day</th>
+	⁃	      </tr>
+	⁃	    </thead>
+	⁃	    <tbody>
+	⁃	      <tr>
+	⁃	        <td>January</td>
+	⁃	        <td>31 day</td>
+	⁃	      </tr>
+	⁃	      <tr>
+	⁃	        <td>February</td>
+	⁃	        <td>28 day</td>
+	⁃	      </tr>
+	⁃	    </tbody>
+	⁃	  </table>
+
+
+: <table> : this is the container of the entire table
+	⁃	<tr> : represents a single row in the table. It contains the cells that make up that row.
+	⁃	<th> : define a header cell in a table. Header cells are typically rendered in a bolder font and often used for column or row headings.
+	⁃	<td> :  define a regular cell that holds a actual content and data.
+	⁃	<tread> : this element is used to  group the header content .usefull for styling an printing purpose. 
+
+
+Question 2 : what is the difference between colspan and rowspan in table?provide example.
+	⁃	colspan : make a multiple columns horizontally,
+	⁃	rowspan : make a multiple rows vertically .
+	⁃	both attributes allows you to merge cells for better organisation of data .
+
+
+EXAMPLE COLSPAN : <table border="1">
+	⁃	    <tr>
+	⁃	      <th colspan="2">device</th>
+	⁃	    </tr>
+	⁃	    <tr>
+	⁃	      <td>vivo</td>
+	⁃	      <td>oppo</td>
+	⁃	    </tr>
+	⁃	  </table>
+	
+
+EXAMPLE ROWSPAN :   <table border="1">
+	⁃	    <tr>
+	⁃	      <th rowspan="2">device</th>
+	⁃	      <td>apple</td>
+	⁃	    </tr>
+	⁃	    <tr>
+	⁃	      <td>samsung</td>
+	⁃	    </tr>
+	⁃	  </table>
+
+
+	Question 3 : why should tables be used sparingly for layout purposes? What is a better alternative?
+	⁃	you should not use tables for page layout or to create a grid - based structure . Instead of, use css for layout purpose. Css is for presentation using tables for layout can make code harder to maintain and more complicated.
+
+
+Lab assignment 
+Task : 
+Create a product catalog table that includes the following columns:
+	⁃	Product name 
+	⁃	Product image(use placeholder image urls)
+	⁃	Price
+	⁃	Description
+	⁃	Availability (in stock ,out of stock)
+
+Additional requirements : 
+	⁃	Use thead for the table header.
+	⁃	Add a border and some basic styling using inline css.
+	⁃	Use colspan or rowspan to merge cells where applicable.
+
+
+
+<table style="width: 100%; border-collapse: collapse;">
+    <thead>
+      <tr>
+        <th style="border: 1px solid ; padding: 10px;">Product Name</th>
+        <th style="border: 1px solid ; padding: 10px;">Product Image</th>
+        <th style="border: 1px solid ; padding: 10px;">Price</th>
+        <th style="border: 1px solid ; padding: 10px;">Description</th>
+        <th style="border: 1px solid ; padding: 10px;">Availability</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Product 1 -->
+      <tr>
+        <td style="border: 1px solid ; padding: 10px;">playstation 5</td>
+        <td style="border: 1px solid ; padding: 10px;">
+          <img src="https://m.media-amazon.com/images/I/41HMaO9jO3L.jpg" alt="" width="60">
+        </td>
+        <td style="border: 1px solid ; padding: 10px;">$499.00</td>
+        <td style="border: 1px solid ; padding: 10px;">powerfull video game console.</td>
+        <td style="border: 1px solid ; padding: 10px;">In Stock</td>
+      </tr>
+  
+      <!-- Product 2 with colspan -->
+      <tr>
+        <td style="border: 1px solid ; padding: 10px;">vivo t4 </td>
+        <td style="border: 1px solid ; padding: 10px;">
+          <img src="https://images.fonearena.com/blog/wp-content/uploads/2025/04/vivo-T4-5G-1-1024x961.jpg" alt="" width="60">
+        </td>
+        <td style="border: 1px solid ; padding: 10px;">$258.00</td>
+        <td style="border: 1px solid ; padding: 10px;" colspan="2">
+            Sleek design with advanced features. Description spans into availability column.
+        </td>
+        </tr>
+  
+      <!-- Product 3 with rowspan -->
+      <tr>
+        <td style="border: 1px solid ; padding: 10px;" rowspan="2">apple iphone 14 & 14 plus</td>
+        <td style="border: 1px solid ; padding: 10px;">
+          <img src="https://iplanet.one/cdn/shop/files/r1595_Yellow_PDP_Image_Position-1A__en-IN.jpg?v=1691142623&width=1100" alt="" width="60">
+        </td>
+        <td style="border: 1px solid ; padding: 10px;">$799.00</td>
+        <td style="border: 1px solid ; padding: 10px;">Base model with essential features.</td>
+        <td style="border: 1px solid ; padding: 10px;">in Stock</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid ; padding: 10px;">
+          <img src="https://www.dxomark.com/wp-content/uploads/medias/post-132367/Apple-iPhone-14_Plus_FINAL_featured-image-packshot-review.jpg" alt="" width="60">
+        </td>
+        <td style="border: 1px solid ; padding: 10px;">$899.00</td>
+        <td style="border: 1px solid ; padding: 10px;">Plus model with extended battery life.</td>
+        <td style="border: 1px solid ; padding: 10px;">out of  Stock</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
